@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:musisync/constants.dart';
 
 class ScreenHome extends StatelessWidget {
@@ -6,6 +7,10 @@ class ScreenHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    ]);
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
@@ -176,34 +181,3 @@ class ScreenHome extends StatelessWidget {
     );
   }
 }
-
-const list = [
-  {
-    'text': 'Favorites',
-    'icon': Icon(
-      Icons.favorite_border,
-      color: Colors.white,
-    ),
-  },
-  {
-    'text': 'Recently Played',
-    'icon': Icon(
-      Icons.music_note,
-      color: Colors.white,
-    ),
-  },
-  {
-    'text': 'Mostly Played',
-    'icon': Icon(
-      Icons.play_arrow_rounded,
-      color: Colors.white,
-    ),
-  },
-  {
-    'text': 'Search',
-    'icon': Icon(
-      Icons.search,
-      color: Colors.white,
-    ),
-  },
-];
