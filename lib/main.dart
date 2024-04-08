@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:musisync/features/splash/splash.dart';
 
 void main() {
@@ -10,9 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ScreenSplash(),
+      theme: ThemeData(
+        fontFamily: GoogleFonts.aBeeZee().fontFamily,
+      ),
+      home: const ScreenSplash(),
     );
   }
 }

@@ -139,34 +139,7 @@ class ScreenHome extends StatelessWidget {
         crossAxisCount: 2,
         childAspectRatio: 5 / 1.6,
       ),
-      itemBuilder: (context, index) => Padding(
-        padding: const EdgeInsets.all(6),
-        child: Container(
-          decoration: BoxDecoration(
-            color: AppColors.secondaryColor,
-            boxShadow: const [
-              BoxShadow(
-                blurRadius: 2,
-                color: blueBackgroundColor,
-              )
-            ],
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: Row(
-            children: [
-              const SizedBox(width: 15),
-              list[index]['icon'] as Widget,
-              const SizedBox(width: 15),
-              Text(
-                list[index]['text'] as String,
-                style: const TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      itemBuilder: (context, index) => OptionWidget(index: index),
     );
   }
 
@@ -191,5 +164,45 @@ class ScreenHome extends StatelessWidget {
       DeviceOrientation.portraitDown,
       DeviceOrientation.portraitUp,
     ]);
+  }
+}
+
+class OptionWidget extends StatelessWidget {
+  const OptionWidget({
+    super.key,
+    required this.index,
+  });
+  final int index;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(6),
+      child: Container(
+        decoration: BoxDecoration(
+          color: AppColors.secondaryColor,
+          boxShadow: const [
+            BoxShadow(
+              blurRadius: 2,
+              color: blueBackgroundColor,
+            )
+          ],
+          borderRadius: BorderRadius.circular(5),
+        ),
+        child: Row(
+          children: [
+            const SizedBox(width: 15),
+            list[index]['icon'] as Widget,
+            const SizedBox(width: 15),
+            Text(
+              list[index]['text'] as String,
+              style: const TextStyle(
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
