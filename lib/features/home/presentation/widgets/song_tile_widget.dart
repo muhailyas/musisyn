@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:musisync/constants.dart';
 import 'package:musisync/core/constants/app_colors.dart';
@@ -41,23 +42,26 @@ class SongTileWidget extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
               child: SizedBox(
-                width: AppConstants.w * 0.5,
+                width: AppConstants.w * 0.65,
                 child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    AutoSizeText(
                       "Monjathi(From " "Qalb" ")",
                       overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      minFontSize: 14,
                       style: TextStyle(
                         color: Colors.white,
                       ),
                     ),
-                    Text(
+                    AutoSizeText(
                       "Song. Prakash Alex, Christakala, Christaj...",
                       overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
+                      maxLines: 2,
+                      minFontSize: 14,
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -67,23 +71,9 @@ class SongTileWidget extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            Container(
-              height: AppConstants.w * 0.13,
-              width: AppConstants.w * 0.13,
-              decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColors.secondaryColor,
-                  boxShadow: [
-                    BoxShadow(
-                      // offset: Offset(-10, -1),
-                      blurStyle: BlurStyle.outer,
-                      color: AppColors.whiteColor,
-                    ),
-                  ]),
-              child: const Icon(
-                Icons.favorite,
-                color: Colors.red,
-              ),
+            const Icon(
+              Icons.more_vert_rounded,
+              color: Colors.white,
             ),
             AppConstants.width15,
           ],
