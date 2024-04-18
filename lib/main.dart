@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:musisync/core/constants/app_constanta.dart';
 import 'package:musisync/features/splash/splash.dart';
 
 void main() {
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppConstants.sizeInit(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
