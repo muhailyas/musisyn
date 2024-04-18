@@ -19,7 +19,7 @@ class ScreenSplash extends StatelessWidget {
           ));
     });
     return Scaffold(
-      backgroundColor: blueBackgroundColor,
+      backgroundColor: AppColors.primaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -42,7 +42,7 @@ class ScreenSplash extends StatelessWidget {
 
   Widget _buildText() {
     return const Text(
-      "Mikacha Pinnani Gayika\nSreya gosha yathra",
+      "Musisync",
       textAlign: TextAlign.center,
       style: TextStyle(color: AppColors.whiteColor, fontSize: 25),
     );
