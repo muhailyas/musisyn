@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class AppConstants {
   static const fullWidth = SizedBox(width: double.infinity);
   static final width15 = SizedBox(width: w * 0.03);
+  static final height10 = SizedBox(height: h * 0.015);
+  static final height15 = SizedBox(height: h * 0.03);
 
   static double w = 0;
   static double h = 0;
