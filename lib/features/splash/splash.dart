@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:musisync/constants.dart';
 import 'package:musisync/core/constants/app_colors.dart';
-import 'package:musisync/features/home/presentation/pages/home.dart';
+import 'package:musisync/features/auth/presentation/pages/sign_in.dart';
 
 class ScreenSplash extends StatelessWidget {
   const ScreenSplash({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class ScreenSplash extends StatelessWidget {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => const ScreenHome(),
+            builder: (context) => const ScreenSignIn(),
           ));
     });
     return Scaffold(

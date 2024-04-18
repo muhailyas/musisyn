@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:musisync/core/constants/app_constanta.dart';
+import 'package:musisync/core/theme/theme.dart';
 import 'package:musisync/features/splash/splash.dart';
 
 void main() {
@@ -15,9 +15,7 @@ class MyApp extends StatelessWidget {
     AppConstants.sizeInit(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: GoogleFonts.aBeeZee().fontFamily,
-      ),
+      theme: theme,
       home: const ScreenSplash(),
     );
   }
